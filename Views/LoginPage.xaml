@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="second_app.Views.LoginPage"
+             Title="Login"
+             >
+    
+    <StackLayout
+        Margin="10"
+        VerticalOptions="CenterAndExpand">
+
+
+
+        <Label Text="Nome"
+               Padding="5"/>
+        <Entry Placeholder="Nome"/>
+
+        <Label Text="Senha"
+               Padding="5"/>
+        
+        <Entry Placeholder="Senha"/>
+        
+        <Button 
+            Text="Entrar"
+            Clicked="BtnAlteraPage"
+            Margin="10"
+            BackgroundColor="DarkCyan"
+            TextColor="White"
+                />
+
+        <Button Text="Registrar"
+                Clicked="BtnAlteraPage"
+                Margin="10"
+                BackgroundColor="DarkCyan"
+                TextColor="White"
+                />
+    </StackLayout>
+</ContentPage>
