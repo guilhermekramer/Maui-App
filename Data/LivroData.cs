@@ -8,7 +8,6 @@ using SQLite;
 
 namespace second_app.Data
 {
-    
     internal class LivroData
     {
         private SQLiteAsyncConnection connection;

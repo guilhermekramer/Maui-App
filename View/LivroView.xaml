@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="second_app.View.LivroView"
+             xmlns:local="crl-namespace:second_app.ViewModel"
+             Title="LivroView">
+    
+    
+    <VerticalStackLayout>
+        <StackLayout Margin="10"
+             VerticalOptions="CenterAndExpand">
+            
+
+            <Label x:Name="Name" Text="Nome" />
+            <Entry Text="{Binding livro.nome}" Placeholder="nome"/>
+
+            <Label Text="Nome"/>
+            <Entry Text="{Binding livro.autor}" Placeholder="nome"/>
+
+            <Label Text="Nome"/>
+            <Entry Placeholder="nome"/>
+
+            <Label Text="Nome"/>
+            <Entry Placeholder="nome"/>
+
+            <HorizontalStackLayout>
+                <Button Command="{Binding AddCommand}" Text="Adicionar" Background="Blue"/>
+                <Button Command="{Binding UpdateCommand}" Text="Alterar" Background="GreenYellow"/>
+                <Button Command="{Binding DisplayCommand}" Text="Load" Background="Green"/>
+            </HorizontalStackLayout>
+        </StackLayout>
+
+
+            <CollectionView Grid.Row="2" Margin="5"
+                            ItemsSource="{Binding livros}"
+                            SelectedItem="{Binding livro}"
+                            SelectionMode="Multiple">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+
+                        <SwipeView>
+                            <Grid>
+                                <Label Text="{Binding Nome}"/>
+                                <Label Text="{Binding Autor}"/>
+                            </Grid>
+                        </SwipeView>
+                    </DataTemplate>
+                    
+                </CollectionView.ItemTemplate> 
+                
+               
+            </CollectionView>
+    </VerticalStackLayout>
+
+
+</ContentPage>
