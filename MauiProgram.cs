@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using second_app.Service;
 
 namespace second_app
 {
@@ -18,7 +19,7 @@ namespace second_app
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
-
+            builder.Services.AddSingleton<ILivroService, LivroService>();
             return builder.Build();
         }
     }
